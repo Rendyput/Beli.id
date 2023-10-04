@@ -1,27 +1,45 @@
-import Link from "next/link"
+import Link from "next/link";
+import { FaGripLines } from "react-icons/fa";
 import {
   Container,
   Wrapper,
-  SubTitle,
   Title,
-} from "./styled"
+  MenuBurger,
+  Menu,
+  HeaderWrapper,
+  MenuItem,
+} from "./styled";
+import { useState } from "react";
 
 const Header = () => {
-  return (
-    <Container>
-      <Wrapper>
-        <Link href="/">
-          <Title>MideShop</Title>
-        </Link>
-        <Link href="/Store">
-          <SubTitle>Store</SubTitle>
-        </Link>
-        <Link href="/About">
-          <SubTitle>About</SubTitle>
-        </Link>
-      </Wrapper>
-    </Container>
-  )
-}
+  const [isShrinkHeader, setIsShrinkHeader] = useState(true);
 
-export default Header
+  const toggleShrinkHeader = () => {
+    setIsShrinkHeader((state) => !state);
+  };
+
+  return (
+    <HeaderWrapper height={`${isShrinkHeader}`}>
+      <Container >
+        <Wrapper>
+          <Menu>
+            <Link href="/" passHref>
+              <Title>GOSHOP</Title>
+            </Link>
+            <Link href="/store" passHref>
+              <MenuItem>Store</MenuItem>
+            </Link>
+            <Link href="/about" passHref>
+              <MenuItem>About</MenuItem>
+            </Link>
+            <MenuBurger>
+              <FaGripLines size={28} onClick={toggleShrinkHeader} />
+            </MenuBurger>
+          </Menu>
+        </Wrapper>
+      </Container>
+    </HeaderWrapper>
+  );
+};
+
+export default Header;
