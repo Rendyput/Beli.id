@@ -2,7 +2,7 @@ import "@/src/components/styles/globals.css";
 import Head from "next/head";
 import React from "react";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -15,3 +15,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default App;

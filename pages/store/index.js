@@ -1,15 +1,15 @@
 import Header from "@/src/components/Header/Header";
-import LandingPage from "@/src/components/LandingPage/LandingPage"
+import StoreComponent from "@/src/components/Store/Store";
 import FooterComponent from "@/src/components/Footer/Footer";
 
-const Home = () => {
+const StorePage = () => {
   return (
     <>
       <Header />
-      <LandingPage />
+      <StoreComponent />
       {/* <FooterComponent /> */}
     </>
-  )
-}
+  );
+};
 
-export default Home;
+export default StorePage;
