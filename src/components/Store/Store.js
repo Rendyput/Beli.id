@@ -20,7 +20,7 @@ const Store = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const productResponse = await axiosInstance.get("/products?limit=10");
+      const productResponse = await axiosInstance.get("/products?limit=20");
       setProductsList(productResponse.data.products);
     } catch (error) {
       console.log(error);

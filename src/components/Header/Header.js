@@ -24,7 +24,7 @@ const Header = () => {
         <Wrapper>
           <Menu>
             <Link href="/" passHref>
-              <Title>GOSHOP</Title>
+              <Title>GO</Title>
             </Link>
             <Link href="/store" passHref>
               <MenuItem>Store</MenuItem>
