@@ -56,6 +56,7 @@ export const ContentWrapper = styled.div`
 
     @media (max-width: 992px) {
     flex-direction: column-reverse;
+    padding: 0 10px;
   }
     `
 

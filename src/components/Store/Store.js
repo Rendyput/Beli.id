@@ -20,7 +20,7 @@ const Store = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const productResponse = await axiosInstance.get("/products?limit=20");
+      const productResponse = await axiosInstance.get("/products");
       setProductsList(productResponse.data.products);
     } catch (error) {
       console.log(error);
@@ -39,9 +39,8 @@ const Store = () => {
             <ProductList>
               {productsList?.map((product, index) => {
                 return (
-                  <>
                     <ProductCol key={index}>
-                      <ProductBox key={product.id}>
+                      <ProductBox>
                         <ProductImageWrapper>
                           <ProductImage src={product.images[0]} />
                         </ProductImageWrapper>
@@ -58,7 +57,6 @@ const Store = () => {
                         </ProductDetail>
                       </ProductBox>
                     </ProductCol>
-                  </>
                 );
               })}
             </ProductList>

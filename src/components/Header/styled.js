@@ -12,7 +12,7 @@ export const HeaderWrapper = styled.div`
   z-index: 999;
 
   @media (max-width: 992px) {
-    height: ${(props) => (props?.height === "true" ? "80px" : "310px")};
+    height: ${(props) => (props?.height === "true" ? "80px" : "220px")};
   }
 `;
 
