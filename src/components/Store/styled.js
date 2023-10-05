@@ -16,22 +16,36 @@ export const ProductWrapper = styled.div`
   padding-right: calc(${PaddingSpacing}) / 2;
   margin-left: 10px;
   margin-right: 10px;
-`;
+
+  @media (max-width: 992px) {
+    display: flex;
+    columns: 20;
+    grid-row: 6;
+  }
+  `;
 
 export const ProductListWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
-  display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
+  
+@media (min-width: 576px) AND (max-width: 992px) {
+  width: 100%;
+}
 `;
 
 export const ProductList = styled.div`
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   margin: 1em 0;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+
 `;
 
 export const ProductCol = styled.div`
@@ -57,6 +71,7 @@ export const ProductCol = styled.div`
 
 export const ProductBox = styled.div`
   max-width: 300px;
+  height: 375px;
   background: #fff;
   border: 1px solid #e2eef1;
   padding: 16px;
@@ -71,6 +86,7 @@ export const ProductBox = styled.div`
   @media (max-width: 768px) {
     margin-left: auto;
     margin-right: auto;
+    height: 280px;
   }
 
   &:hover {
@@ -78,17 +94,18 @@ export const ProductBox = styled.div`
   }
 `;
 
-
 export const ProductImageWrapper = styled.div`
-  width: 60%;
-  height: 270px;
+  width: 100%;
+  height: 280px;
   position: relative;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 12px;
 
-  @media (min-width: 768px) AND (max-width: 992px) {
+  @media (max-width: 992px) {
     width: 80%;
+    height: 60%;
   }
 `;
 
@@ -102,10 +119,16 @@ export const ProductImage = styled.img`
   -moz-transform: translate(-50%, -50%) scale(1);
   -o-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
+
+  @media (max-width: 992px) {
+    top: 50%;
+    left: 50%;
+  }
 `;
 
 export const ProductDetail = styled.div`
   padding: 14px 0;
+
 `;
 
 export const ProductDetailTitle = styled.h3`
@@ -114,6 +137,12 @@ export const ProductDetailTitle = styled.h3`
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  
+  @media (max-width: 992px) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
   `;
 
 export const ProductDetailDesc = styled.p`
