@@ -67,19 +67,20 @@ export const Menu = styled.ul`
 
 export const Title = styled.h1`
   font-weight: 700;
-  font-family: Roboto, Sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: italic;
   letter-spacing: 6px;
   line-height: 1.2em;
-  color: #E66912;
   transition: 0.3;
-  padding-top: 6px;
+  padding-top: 2px;
+  color: #BED1DF;
   
   &:hover {
-    color: #BED1DF;
+    color: #E66912;
   }
 
   @media (max-width: 992px) {
-    margin-top: -12px;
+    margin-top: -8px;
   }
 `;
 
@@ -87,19 +88,19 @@ export const MenuItem = styled.li`
   list-style: none;
   letter-spacing: 2px;
   font-size: 20px;
-  color: #7E7C73;
+  color: #BED1DF;
   margin: 12px 10px 0px 40px;
   cursor: pointer;
   transition: 0.2s;
-  font-weight: 700;
-  font
-
+  font-weight: 500;
+  
   &:hover {
     color: #E66912;
   }
 
   @media (max-width: 992px) {
     margin-top: 30px;
+    margin-left: 8px;
   }
 `;
 
@@ -110,7 +111,12 @@ export const MenuBurger = styled.div`
     display: block;
     position: absolute;
     cursor: pointer;
+    color: #BED1DF;
     right: 0;
     top: 1.4em;
+    
+    &:hover {
+      color: #E66912;
+    }
   }
 `;

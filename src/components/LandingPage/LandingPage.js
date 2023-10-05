@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
+  ButtonWrapper,
   Container,
   ContentWrapper,
+  ExploreButton,
   HeaderContent,
   HeaderImage,
   SubTitle,
@@ -13,22 +15,30 @@ import {
 const LandingPage = () => {
   return (
     <>
-    <Container>
-      <Wrapper>
-        <ContentWrapper>
-          <HeaderContent>
-           <HeaderImage src="./assets/hero.png"/>
-          </HeaderContent>
-          <HeaderContent>
-            <Title>Cari barang-barang yang kamu inginkan di Go Shop</Title>
-            <SubTitle>
-              Go Shop adalah E-Commerce yang dapat memberikan pengalaman
-              terbaik untuk jual beli bagi pelanggan.
-            </SubTitle>
-          </HeaderContent>
-        </ContentWrapper>
-      </Wrapper>
-    </Container>
+      <Container>
+        <Wrapper>
+          <ContentWrapper>
+            <HeaderContent>
+              <HeaderImage src="./assets/hero.png" />
+            </HeaderContent>
+            <HeaderContent>
+              <Title>Mari Berbelanja!</Title>
+              <SubTitle>
+                Go adalah E-Commerce yang dapat memberikan pengalaman
+                terbaik untuk jual beli bagi pelanggan.
+              </SubTitle>
+            </HeaderContent>
+          </ContentWrapper>
+          <ButtonWrapper>
+            <Link href="/store" passHref>
+              <ExploreButton>Explore Now!</ExploreButton>
+            </Link>
+          </ButtonWrapper>
+        </Wrapper>
+      </Container>
+      <Container>
+        <Wrapper></Wrapper>
+      </Container>
     </>
   );
 };
