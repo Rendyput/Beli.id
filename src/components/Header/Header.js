@@ -8,6 +8,7 @@ import {
   Menu,
   HeaderWrapper,
   MenuItem,
+  MenuList,
 } from "./styled";
 import { useState } from "react";
 
@@ -20,18 +21,20 @@ const Header = () => {
 
   return (
     <HeaderWrapper height={`${isShrinkHeader}`}>
-      <Container >
+      <Container>
         <Wrapper>
           <Menu>
             <Link href="/" passHref>
               <Title>GO</Title>
             </Link>
-            <Link href="/store" passHref>
-              <MenuItem>Store</MenuItem>
-            </Link>
-            <Link href="/about" passHref>
-              <MenuItem>About</MenuItem>
-            </Link>
+            <MenuList>
+              <Link href="/store" passHref>
+                <MenuItem>Store</MenuItem>
+              </Link>
+              <Link href="/about" passHref>
+                <MenuItem>About</MenuItem>
+              </Link>
+            </MenuList>
             <MenuBurger>
               <FaGripLines size={28} onClick={toggleShrinkHeader} />
             </MenuBurger>

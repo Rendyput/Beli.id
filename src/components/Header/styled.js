@@ -34,7 +34,7 @@ export const Container = styled.div`
     max-width: 800px;
     padding: 0 50px;
   }
-
+  
   @media (max-width: 768px) {
     max-width: 800px;
   }
@@ -50,18 +50,6 @@ export const Wrapper = styled.div`
     align-items: start;
     flex-direction: column;
     overflow: hidden;
-  }
-`;
-
-export const Menu = styled.ul`
-  display: flex;
-  margin-top: 5px;
-  margin-left: 30px;
-
-  @media (max-width: 992px) {
-    margin-left: 0;
-    flex-direction: column;
-    margin-top: 25px;
   }
 `;
 
@@ -84,6 +72,30 @@ export const Title = styled.h1`
   }
 `;
 
+export const Menu = styled.ul`
+  display: flex;
+  margin-top: 5px;
+  margin-left: 30px;
+
+  @media (max-width: 992px) {
+    margin-left: 0;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+`;
+
+export const MenuList = styled.div`
+  display: flex;
+  margin-left: 40px;
+
+  @media (max-width: 992px) {
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: block;
+    margin-left: 2px;
+  }
+`
+
 export const MenuItem = styled.li`
   list-style: none;
   letter-spacing: 2px;
@@ -97,12 +109,12 @@ export const MenuItem = styled.li`
   &:hover {
     color: #E66912;
   }
-
+  
   @media (max-width: 992px) {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 8px;
   }
-`;
+  `;
 
 export const MenuBurger = styled.div`
   display: none;
@@ -113,7 +125,7 @@ export const MenuBurger = styled.div`
     cursor: pointer;
     color: #BED1DF;
     right: 0;
-    top: 1.4em;
+    top: 1.6em;
     
     &:hover {
       color: #E66912;
