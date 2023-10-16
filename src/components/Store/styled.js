@@ -104,13 +104,13 @@ export const ProductImageWrapper = styled.div`
   border-radius: 12px;
 
   @media (max-width: 992px) {
-    width: 80%;
-    height: 60%;
+    width: 65%;
+    height: 70%;
   }
 `;
 
 export const ProductImage = styled.img`
-  width: 100%;
+  width: 75%;
   max-width: inherit;
   position: absolute;
   top: 50%;
@@ -133,10 +133,11 @@ export const ProductDetail = styled.div`
 
 export const ProductDetailTitle = styled.h3`
   display: flex;
-  font-weight: 800;
+  font-weight: 600;
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  color: black;
   
   @media (max-width: 992px) {
     text-overflow: ellipsis;
@@ -147,13 +148,14 @@ export const ProductDetailTitle = styled.h3`
 
 export const ProductDetailDesc = styled.p`
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding-top: 4px;
   font-weight: 400;
   letter-spacing: 2px;
+  color: slategray;
   `;
 
 export const ProductDetailPrice = styled.h2`
@@ -166,4 +168,5 @@ export const ProductDetailPrice = styled.h2`
   align-items: center;
   justify-content: center;
   font-size: 16px;
+  color: black;
   `;

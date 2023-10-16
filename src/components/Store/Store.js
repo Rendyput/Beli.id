@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import axiosInstance from "@/src/lib/axios";
+import Link from "next/link";
 import {
   Container,
   ProductBox,
@@ -14,22 +13,10 @@ import {
   ProductListWrapper,
   ProductWrapper,
 } from "./styled";
+import { UseFetchProducts } from "./features/useFetchProducts";
 
 const Store = () => {
-  const [productsList, setProductsList] = useState([]);
-
-  const fetchAllProducts = async () => {
-    try {
-      const productResponse = await axiosInstance.get("/products");
-      setProductsList(productResponse.data.products);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchAllProducts();
-  }, []);
+  const { data } = UseFetchProducts();
 
   return (
     <>
@@ -37,12 +24,13 @@ const Store = () => {
         <ProductWrapper>
           <ProductListWrapper>
             <ProductList>
-              {productsList?.map((product, index) => {
+              {data?.map((product, index) => {
                 return (
-                    <ProductCol key={index}>
+                  <ProductCol key={index}>
+                    <Link href={`/store/${product.id}`}>
                       <ProductBox>
                         <ProductImageWrapper>
-                          <ProductImage src={product.images[0]} />
+                          <ProductImage src={product.thumbnail} />
                         </ProductImageWrapper>
                         <ProductDetail>
                           <ProductDetailTitle>
@@ -56,7 +44,8 @@ const Store = () => {
                           </ProductDetailDesc>
                         </ProductDetail>
                       </ProductBox>
-                    </ProductCol>
+                    </Link>
+                  </ProductCol>
                 );
               })}
             </ProductList>
