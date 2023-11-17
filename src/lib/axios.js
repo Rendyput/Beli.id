@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
 
 const routes = {
     getProducts: () => '/api/store/product',
-    getProductById: (id = "") => `/api/store/product?${id}`,
+    getProductById: (id = "") => `/api/store/product/${id}`,
 }
 
 export { axiosInstance, routes };

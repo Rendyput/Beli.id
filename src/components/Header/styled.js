@@ -32,7 +32,7 @@ export const Container = styled.div`
 
   @media (max-width: 992px) {
     max-width: 800px;
-    padding: 0 50px;
+    padding: 0 30px;
   }
   
   @media (max-width: 768px) {
@@ -126,6 +126,7 @@ export const MenuBurger = styled.div`
     color: #BED1DF;
     right: 0;
     top: 1.6em;
+    transition: 0.6s;
     
     &:hover {
       color: #E66912;

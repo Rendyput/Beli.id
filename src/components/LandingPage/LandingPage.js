@@ -24,7 +24,7 @@ const LandingPage = () => {
             <HeaderContent>
               <Title>Mari Berbelanja!</Title>
               <SubTitle>
-                Go adalah E-Commerce yang dapat memberikan pengalaman
+                Beli.id adalah E-Commerce yang dapat memberikan pengalaman
                 terbaik untuk jual beli bagi pelanggan.
               </SubTitle>
             </HeaderContent>

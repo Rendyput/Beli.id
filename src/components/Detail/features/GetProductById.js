@@ -14,7 +14,7 @@ export const GetProductById = () => {
     const product = products;
 
     if (product === "Product not found") return setIsInvalid(true);
-    return console.log(product.data.result[0]);
+    return setProduct(product.data.result[0]);
   };
 
   useEffect(() => {
